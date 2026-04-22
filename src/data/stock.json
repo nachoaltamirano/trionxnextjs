@@ -1,0 +1,14 @@
+{
+  "traje-triatlon-pro": { "XS": 3, "S": 5, "M": 8, "L": 6, "XL": 3 },
+  "gafas-hydrox": { "UNICA": 15 },
+  "gorro-silicona-trionx": { "UNICA": 20 },
+  "calza-ciclismo-aero": { "XS": 2, "S": 4, "M": 7, "L": 5, "XL": 4, "XXL": 2 },
+  "jersey-manga-larga-race": { "XS": 3, "S": 6, "M": 9, "L": 7, "XL": 5 },
+  "guantes-aero": { "S": 8, "M": 12, "L": 10, "XL": 6 },
+  "remera-tecnica-running": { "XS": 4, "S": 8, "M": 12, "L": 10, "XL": 7, "XXL": 3 },
+  "short-2-en-1": { "XS": 3, "S": 6, "M": 10, "L": 8, "XL": 5 },
+  "medias-compresion": { "S": 10, "M": 15, "L": 12 },
+  "cinturon-hidratacion": { "UNICA": 18 },
+  "gorra-running": { "UNICA": 25 },
+  "lentes-deportivos-uv": { "UNICA": 12 }
+}
