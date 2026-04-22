@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/Button';
 
 export default function SuccessPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white flex items-center justify-center">
+    <div className="min-h-screen bg-linear-to-b from-green-50 to-white flex items-center justify-center">
       <div className="max-w-md mx-auto px-4 text-center">
         <CheckCircle size={80} className="mx-auto text-green-500 mb-6" />
 

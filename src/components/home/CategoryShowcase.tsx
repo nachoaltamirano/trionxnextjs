@@ -64,14 +64,14 @@ export function CategoryShowcase() {
                 className="group"
                 style={{ animationDelay: `${idx * 0.1}s` }}
               >
-                <div className={`category-card relative overflow-hidden h-96 md:h-[450px] bg-gradient-to-br ${category.color} group transition-all duration-300 hover:shadow-2xl`} style={{ borderRadius: '2px' }}>
+                <div className={`category-card relative overflow-hidden h-96 md:h-112.5 bg-linear-to-br ${category.color} group transition-all duration-300 hover:shadow-2xl`} style={{ borderRadius: '2px' }}>
                   {/* Icon wrapper */}
                   <div className="icon-wrapper absolute inset-0 flex items-center justify-center text-white opacity-20 group-hover:opacity-30 transition-all duration-300">
                     {category.icon}
                   </div>
 
                   {/* Bottom content */}
-                  <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-t from-black via-black/50 to-transparent">
+                  <div className="absolute inset-0 flex flex-col justify-end p-8 bg-linear-to-t from-black via-black/50 to-transparent">
                     <h3 
                       className="text-3xl md:text-4xl font-black text-white mb-2 group-hover:-translate-y-2 transition-transform duration-300 uppercase"
                       style={{ fontFamily: 'Bebas Neue, sans-serif', letterSpacing: '0.02em' }}
