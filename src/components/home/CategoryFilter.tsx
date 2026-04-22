@@ -16,10 +16,9 @@ const categoryStyles = `
 
 const categories = [
   { id: 'todos', label: 'Todos', href: '/productos' },
-  { id: 'natacion', label: 'Natación', href: '/productos?category=natacion' },
-  { id: 'ciclismo', label: 'Ciclismo', href: '/productos?category=ciclismo' },
-  { id: 'running', label: 'Running', href: '/productos?category=running' },
-  { id: 'accesorios', label: 'Accesorios', href: '/productos?category=accesorios' },
+  { id: 'garmont', label: 'Garmont', href: '/productos?category=garmont' },
+  { id: 'pista', label: 'Pista', href: '/productos?category=pista' },
+  { id: 'gorras', label: 'Gorras', href: '/productos?category=gorras' },
 ];
 
 export function CategoryFilter() {

@@ -31,15 +31,15 @@ export default async function ProductosPage({ searchParams }: PageProps) {
   }
 
   const categoryLabel: Record<string, string> = {
-    natacion: 'Natación',
-    ciclismo: 'Ciclismo',
-    running: 'Running',
-    accesorios: 'Accesorios',
+    garmont: 'Garmont',
+    pista: 'Pista',
+    gorras: 'Gorras',
+    
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 py-12">
+    <div className="w-full min-h-screen bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-12">
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-2">

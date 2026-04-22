@@ -30,8 +30,8 @@ export default function CheckoutPage() {
 
   if (items.length === 0) {
     return (
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-3xl mx-auto px-4 py-12">
+      <div className="w-full min-h-screen bg-gray-50">
+        <div className="max-w-3xl mx-auto px-4 md:px-6 py-12">
           <div className="bg-white rounded-lg p-12 text-center">
             <AlertCircle size={64} className="mx-auto text-gray-300 mb-4" />
             <h2 className="text-2xl font-bold text-gray-800 mb-2">Carrito vacío</h2>
@@ -103,8 +103,8 @@ export default function CheckoutPage() {
   const finalTotal = subtotal + shipping + tax;
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 py-12">
+    <div className="w-full min-h-screen bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-12">
         <h1 className="text-3xl font-bold mb-8 text-gray-900">Checkout</h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

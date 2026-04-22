@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/Button';
 
 export default function FailurePage() {
   return (
-    <div className="min-h-screen bg-linear-to-b from-red-50 to-white flex items-center justify-center">
+    <div className="w-full min-h-screen bg-linear-to-b from-red-50 to-white flex items-center justify-center">
       <div className="max-w-md mx-auto px-4 text-center">
         <XCircle size={80} className="mx-auto text-red-500 mb-6" />
 

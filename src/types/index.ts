@@ -4,7 +4,7 @@ export interface Product {
   name: string;
   description: string;
   price: number;
-  category: 'natacion' | 'ciclismo' | 'running' | 'accesorios';
+  category: 'garmont' | 'pista' | 'gorras';
   images: string[];
   sizes: string[];
   stock: Record<string, number>;

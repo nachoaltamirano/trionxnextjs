@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
@@ -28,12 +28,12 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} w-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="w-full flex flex-col m-0 p-0">
         <Navbar />
         <SponsorBanner />
-        <main className="flex-1 pt-20">{children}</main>
+        <main className="flex-1 w-full pt-20">{children}</main>
         <Footer />
       </body>
     </html>

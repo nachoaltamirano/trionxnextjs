@@ -66,17 +66,17 @@ export function Navbar() {
       <nav 
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled 
-            ? 'py-2 backdrop-blur-md bg-black/80 border-b border-red-600/30' 
-            : 'py-4 bg-black/95 backdrop-blur-sm border-b border-red-600/50'
+            ? 'py-2 backdrop-blur-md bg-white border-b border-gray-200' 
+            : 'py-4 bg-white backdrop-blur-sm border-b border-gray-100'
         }`}
         style={{ animation: 'slideDown 0.5s ease' }}
       >
-        <div className="max-w-7xl mx-auto px-4 lg:px-6">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 w-full">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link 
               href="/" 
-              className="text-xl lg:text-2xl font-black text-red-600 tracking-widest hover:text-red-500 transition"
+              className="text-xl lg:text-2xl font-black text-black tracking-widest hover:text-red-600 transition"
               style={{ fontFamily: 'Bebas Neue, sans-serif', letterSpacing: '0.1em' }}
             >
               TRIONX
@@ -87,14 +87,14 @@ export function Navbar() {
               {[
                 { href: '/', label: 'Inicio' },
                 { href: '/productos', label: 'Productos' },
-                { href: '/productos?category=natacion', label: 'Natación' },
-                { href: '/productos?category=ciclismo', label: 'Ciclismo' },
-                { href: '/productos?category=running', label: 'Running' },
+                { href: '/productos?category=garmont', label: 'Garmont' },
+                { href: '/productos?category=pista', label: 'Pista' },
+                { href: '/productos?category=gorras', label: 'Gorras' },
               ].map((link) => (
                 <Link 
                   key={link.href}
                   href={link.href} 
-                  className="nav-link text-white hover:text-red-500"
+                  className="nav-link text-black hover:text-red-600"
                 >
                   {link.label}
                 </Link>
@@ -106,7 +106,7 @@ export function Navbar() {
               {/* Cart Icon */}
               <Link 
                 href="/carrito" 
-                className="relative text-white hover:text-red-600 transition group"
+                className="relative text-black hover:text-red-600 transition group"
               >
                 <ShoppingCart size={24} className="group-hover:scale-110 transition-transform" />
                 {hydrated && itemCount > 0 && (
@@ -118,7 +118,7 @@ export function Navbar() {
 
               {/* Mobile Menu Toggle */}
               <button
-                className="lg:hidden text-white hover:text-red-600 transition"
+                className="lg:hidden text-black hover:text-red-600 transition"
                 onClick={() => setMenuOpen(!menuOpen)}
               >
                 {menuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -128,18 +128,18 @@ export function Navbar() {
 
           {/* Mobile Menu */}
           {menuOpen && (
-            <div className="lg:hidden mt-6 pt-6 border-t border-red-600/30 flex flex-col gap-4 pb-4">
+            <div className="lg:hidden mt-6 pt-6 border-t border-gray-200 flex flex-col gap-4 pb-4">
               {[
                 { href: '/', label: 'Inicio' },
                 { href: '/productos', label: 'Productos' },
-                { href: '/productos?category=natacion', label: 'Natación' },
-                { href: '/productos?category=ciclismo', label: 'Ciclismo' },
-                { href: '/productos?category=running', label: 'Running' },
+                { href: '/productos?category=garmont', label: 'Garmont' },
+                { href: '/productos?category=pista', label: 'Pista' },
+                { href: '/productos?category=gorras', label: 'Gorras' },
               ].map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="nav-link text-white hover:text-red-500"
+                  className="nav-link text-black hover:text-red-600"
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.label}

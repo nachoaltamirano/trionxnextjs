@@ -32,8 +32,8 @@ export default async function ProductPage({ params }: PageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 py-12">
+    <div className="w-full min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-12">
         {/* Breadcrumb */}
         <div className="mb-8 text-sm text-gray-600">
           <a href="/productos" className="hover:text-blue-600 transition">

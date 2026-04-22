@@ -4,11 +4,11 @@ import { Share2, Mail, Phone } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="bg-black text-white border-t border-red-600" style={{ paddingTop: '4rem', paddingBottom: '3rem' }}>
+    <footer className="bg-black text-white border-t border-red-600" style={{ paddingTop: '6rem', paddingBottom: '5rem' }}>
       {/* Red separator line */}
       <div className="h-1 bg-red-600 w-full mb-12"></div>
 
-      <div className="max-w-7xl mx-auto px-4 lg:px-6">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 w-full">
         {/* Main Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
@@ -55,25 +55,21 @@ export function Footer() {
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/productos?category=natacion" className="hover:text-red-600 transition font-medium">
-                  Natación
+                <Link href="/productos?category=garmont" className="hover:text-red-600 transition font-medium">
+                  Garmont
                 </Link>
               </li>
               <li>
-                <Link href="/productos?category=ciclismo" className="hover:text-red-600 transition font-medium">
-                  Ciclismo
+                <Link href="/productos?category=pista" className="hover:text-red-600 transition font-medium">
+                  Pista
                 </Link>
               </li>
               <li>
-                <Link href="/productos?category=running" className="hover:text-red-600 transition font-medium">
-                  Running
+                <Link href="/productos?category=gorras" className="hover:text-red-600 transition font-medium">
+                  Gorras
                 </Link>
               </li>
-              <li>
-                <Link href="/productos?category=accesorios" className="hover:text-red-600 transition font-medium">
-                  Accesorios
-                </Link>
-              </li>
+
             </ul>
           </div>
 

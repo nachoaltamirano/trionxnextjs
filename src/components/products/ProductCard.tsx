@@ -13,10 +13,9 @@ interface ProductCardProps {
 }
 
 const categoryColors: Record<string, string> = {
-  natacion: 'bg-blue-600',
-  ciclismo: 'bg-red-600',
-  running: 'bg-orange-600',
-  accesorios: 'bg-gray-700',
+  garmont: 'bg-blue-600',
+  pista: 'bg-red-600',
+  gorras: 'bg-orange-600',
 };
 
 export function ProductCard({ product }: ProductCardProps) {

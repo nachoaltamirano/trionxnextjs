@@ -38,10 +38,9 @@ export function ProductDetail({ product }: ProductDetailProps) {
   };
 
   const categoryLabel: Record<string, string> = {
-    natacion: 'Natación',
-    ciclismo: 'Ciclismo',
-    running: 'Running',
-    accesorios: 'Accesorios',
+    garmont: 'Garmont',
+    pista: 'Pista',
+    gorras: 'Gorras',
   };
 
   return (

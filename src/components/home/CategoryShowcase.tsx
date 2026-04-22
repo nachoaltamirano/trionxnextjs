@@ -14,22 +14,22 @@ interface CategoryItem {
 
 const categories: CategoryItem[] = [
   {
-    name: 'NATACIÓN',
-    slug: 'natacion',
+    name: 'GARMONT',
+    slug: 'garmont',
     icon: <Waves size={64} strokeWidth={1} />,
     color: 'from-blue-600 to-blue-800',
     description: 'Trajes y equipo para natación de alto rendimiento',
   },
   {
-    name: 'CICLISMO',
-    slug: 'ciclismo',
+    name: 'PISTA',
+    slug: 'pista',
     icon: <Mountain size={64} strokeWidth={1} />,
     color: 'from-red-600 to-red-800',
     description: 'Jersey y indumentaria de ciclismo profesional',
   },
   {
-    name: 'RUNNING',
-    slug: 'running',
+    name: 'GORRAS',
+    slug: 'gorras',
     icon: <Zap size={64} strokeWidth={1} />,
     color: 'from-orange-600 to-orange-800',
     description: 'Ropa y accesorios para running de velocidad',
@@ -54,8 +54,8 @@ export function CategoryShowcase() {
     <>
       <style>{showcaseStyles}</style>
       
-      <section className="py-20 md:py-32 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 md:py-32 px-6 md:px-8 bg-white">
+        <div className="max-w-7xl mx-auto w-full">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {categories.map((category, idx) => (
               <Link
@@ -64,7 +64,7 @@ export function CategoryShowcase() {
                 className="group"
                 style={{ animationDelay: `${idx * 0.1}s` }}
               >
-                <div className={`category-card relative overflow-hidden h-96 md:h-112.5 bg-linear-to-br ${category.color} group transition-all duration-300 hover:shadow-2xl`} style={{ borderRadius: '2px' }}>
+<div className={`category-card relative overflow-hidden h-96 md:h-[450px] bg-gradient-to-br ${category.color} group transition-all duration-300 hover:shadow-2xl`} style={{ borderRadius: '2px' }}>
                   {/* Icon wrapper */}
                   <div className="icon-wrapper absolute inset-0 flex items-center justify-center text-white opacity-20 group-hover:opacity-30 transition-all duration-300">
                     {category.icon}

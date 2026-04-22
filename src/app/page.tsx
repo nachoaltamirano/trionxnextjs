@@ -37,15 +37,17 @@ export default async function Home() {
     <>
       <style>{pageStyles}</style>
 
-      <div className="min-h-screen bg-white">
+      <div className="w-full min-h-screen bg-white">
         {/* Hero Slider */}
         <HeroSlider />
 
         {/* Category Showcase */}
-        <CategoryShowcase />
+        <div className="mb-8 md:mb-12">
+          <CategoryShowcase />
+        </div>
 
         {/* Featured Section */}
-        <section className="py-16 md:py-32 px-4 bg-white">
+        <section className="py-16 md:py-32 px-6 md:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="mb-16">
               <h2 
@@ -84,7 +86,7 @@ export default async function Home() {
         </section>
 
         {/* Why Choose Us */}
-        <section className="py-16 md:py-32 px-4 bg-black text-white">
+        <section className="py-16 md:py-32 px-6 md:px-8 bg-black text-white mt-20 md:mt-40">
           <div className="max-w-7xl mx-auto">
             <div className="mb-16">
               <h2 
