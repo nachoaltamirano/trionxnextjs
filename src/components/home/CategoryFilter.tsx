@@ -4,6 +4,16 @@ import React from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 
+const categoryStyles = `
+  @keyframes slideInCategory {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .category-btn {
+    animation: slideInCategory 0.4s ease-out forwards;
+  }
+`;
+
 const categories = [
   { id: 'todos', label: 'Todos', href: '/productos' },
   { id: 'natacion', label: 'Natación', href: '/productos?category=natacion' },
@@ -17,20 +27,30 @@ export function CategoryFilter() {
   const category = searchParams.get('category');
 
   return (
-    <div className="flex flex-wrap gap-2 justify-center my-8">
-      {categories.map((cat) => (
-        <Link
-          key={cat.id}
-          href={cat.href}
-          className={`px-6 py-2 rounded-full font-semibold transition-all duration-200 ${
-            (!category && cat.id === 'todos') || category === cat.id
-              ? 'bg-blue-600 text-white'
-              : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
-          }`}
-        >
-          {cat.label}
-        </Link>
-      ))}
-    </div>
+    <>
+      <style>{categoryStyles}</style>
+      
+      <div className="flex flex-wrap gap-3 justify-center my-12">
+        {categories.map((cat, idx) => (
+          <Link
+            key={cat.id}
+            href={cat.href}
+            className="category-btn"
+            style={{ animationDelay: `${idx * 0.05}s` }}
+          >
+            <button
+              className={`px-7 py-3 font-black uppercase tracking-widest text-sm transition-all duration-300 ${
+                (!category && cat.id === 'todos') || category === cat.id
+                  ? 'bg-red-600 text-white'
+                  : 'bg-white text-black border-2 border-black hover:bg-black hover:text-white'
+              }`}
+              style={{ borderRadius: '2px' }}
+            >
+              {cat.label}
+            </button>
+          </Link>
+        ))}
+      </div>
+    </>
   );
 }

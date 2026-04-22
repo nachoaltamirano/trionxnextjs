@@ -1,1 +1,37 @@
-[]
+[
+  {
+    "id": "ORD-1776869405500",
+    "preferenceId": "2682406710-28854f52-0782-4702-b4b5-fa0bc3a34907",
+    "status": "pending",
+    "items": [
+      {
+        "productId": "gafas-hydrox",
+        "quantity": 1,
+        "size": "UNICA",
+        "price": 24990,
+        "name": "Gafas HydroX",
+        "image": "/images/products/gafas-hydrox.jpg"
+      },
+      {
+        "productId": "calza-ciclismo-aero",
+        "quantity": 1,
+        "size": "S",
+        "price": 54990,
+        "name": "Calza ciclismo Aero",
+        "image": "/images/products/calza-aero.jpg"
+      }
+    ],
+    "customerName": "Ignacio Altamirano",
+    "customerEmail": "nachoaltamiran@gmail.com",
+    "customerPhone": "1124033492",
+    "customerAddress": "Islandia 5550",
+    "customerCity": "CABA",
+    "customerPostalCode": "1431",
+    "subtotal": 79980,
+    "taxes": 16796,
+    "shipping": 1500,
+    "total": 98276,
+    "createdAt": "2026-04-22T14:50:05.500Z",
+    "updatedAt": "2026-04-22T14:50:05.500Z"
+  }
+]

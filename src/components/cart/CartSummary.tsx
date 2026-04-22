@@ -21,39 +21,39 @@ export function CartSummary() {
   const finalTotal = subtotal + shipping + tax;
 
   return (
-    <div className="bg-gray-50 rounded-lg p-6 sticky top-4">
-      <h3 className="text-xl font-bold mb-4">Resumen del pedido</h3>
+    <div className="bg-black border border-red-600 rounded-lg p-6 sticky top-4">
+      <h3 className="text-xl font-bold mb-4 text-white">Resumen del pedido</h3>
 
       <div className="space-y-3 text-sm mb-6">
-        <div className="flex justify-between">
-          <span className="text-gray-600">Subtotal ({itemCount} items)</span>
+        <div className="flex justify-between text-gray-300">
+          <span>Subtotal ({itemCount} items)</span>
           <span className="font-semibold">${subtotal.toLocaleString('es-AR')}</span>
         </div>
-        <div className="flex justify-between">
-          <span className="text-gray-600">Impuestos (21%)</span>
+        <div className="flex justify-between text-gray-300">
+          <span>Impuestos (21%)</span>
           <span className="font-semibold">${tax.toLocaleString('es-AR')}</span>
         </div>
-        <div className="flex justify-between">
-          <span className="text-gray-600">Envío</span>
+        <div className="flex justify-between text-gray-300">
+          <span>Envío</span>
           <span className="font-semibold">${shipping.toLocaleString('es-AR')}</span>
         </div>
       </div>
 
-      <div className="border-t pt-4 mb-6">
+      <div className="border-t border-red-600 pt-4 mb-6">
         <div className="flex justify-between text-lg">
-          <span className="font-bold">Total</span>
-          <span className="font-bold text-blue-600">
+          <span className="font-bold text-white">Total</span>
+          <span className="font-bold text-red-600">
             ${finalTotal.toLocaleString('es-AR')}
           </span>
         </div>
       </div>
 
       <Link href="/checkout" className="block mb-3">
-        <Button className="w-full">Ir a checkout</Button>
+        <Button className="w-full bg-red-600 hover:bg-red-700">Ir a checkout</Button>
       </Link>
 
       <Link href="/productos">
-        <button className="w-full px-4 py-2 text-blue-600 font-semibold hover:text-blue-700 transition">
+        <button className="w-full px-4 py-2 text-red-600 font-semibold hover:text-red-700 transition border border-red-600 rounded">
           Continuar comprando
         </button>
       </Link>

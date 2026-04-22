@@ -7,17 +7,17 @@ interface BadgeProps {
 
 export function Badge({ type, className = '' }: BadgeProps) {
   const baseClasses =
-    'absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-semibold text-white uppercase tracking-wider';
+    'absolute top-4 left-4 px-4 py-2 text-xs font-black text-white uppercase tracking-widest';
 
   const typeClasses =
     type === 'new'
-      ? 'bg-green-500'
+      ? 'bg-green-600'
       : type === 'top'
-        ? 'bg-red-500'
+        ? 'bg-red-600'
         : '';
 
   return (
-    <div className={`${baseClasses} ${typeClasses} ${className}`}>
+    <div className={`${baseClasses} ${typeClasses} ${className}`} style={{ borderRadius: '2px' }}>
       {type === 'new' ? 'Nuevo' : 'Top'}
     </div>
   );

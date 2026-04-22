@@ -15,9 +15,9 @@ export function CartItem({ item }: CartItemProps) {
   const removeItem = useCartStore((state) => state.removeItem);
 
   return (
-    <div className="flex gap-4 py-4 border-b border-gray-200 last:border-0">
+    <div className="flex gap-4 py-4 px-2 border-b border-gray-200 last:border-0 items-start">
       {/* Image */}
-      <div className="w-24 h-24 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0">
+      <div className="w-20 h-20 bg-gray-100 overflow-hidden shrink-0 border border-gray-300">
         <Image
           src={item.image}
           alt={item.name}
@@ -28,47 +28,47 @@ export function CartItem({ item }: CartItemProps) {
       </div>
 
       {/* Details */}
-      <div className="flex-1 flex flex-col justify-between">
+      <div className="flex-1 flex flex-col justify-between gap-2">
         <div>
-          <h3 className="font-semibold text-gray-800 line-clamp-2">{item.name}</h3>
-          <p className="text-sm text-gray-600 mt-1">Talle: {item.size}</p>
-          <p className="font-bold text-blue-600 mt-2">
+          <h3 className="font-black text-gray-800 line-clamp-2 text-sm uppercase">{item.name}</h3>
+          <p className="text-xs text-gray-600 mt-1 font-bold">TALLE: {item.size}</p>
+          <p className="font-black text-red-600 mt-2 text-lg">
             ${item.price.toLocaleString('es-AR')}
           </p>
         </div>
-      </div>
+        
+        {/* Quantity Controls */}
+        <div className="flex items-center gap-1">
+          <button
+            onClick={() => updateQuantity(item.productId, item.size, item.quantity - 1)}
+            className="p-1 bg-gray-200 hover:bg-black hover:text-white transition"
+            style={{ borderRadius: '2px' }}
+          >
+            <Minus size={14} strokeWidth={3} />
+          </button>
+          <span className="w-6 text-center font-black text-sm">{item.quantity}</span>
+          <button
+            onClick={() => updateQuantity(item.productId, item.size, item.quantity + 1)}
+            className="p-1 bg-gray-200 hover:bg-black hover:text-white transition"
+            style={{ borderRadius: '2px' }}
+          >
+            <Plus size={14} strokeWidth={3} />
+          </button>
+          
+          {/* Subtotal */}
+          <span className="ml-auto font-black text-gray-800 text-sm">
+            ${(item.price * item.quantity).toLocaleString('es-AR')}
+          </span>
 
-      {/* Quantity Controls */}
-      <div className="flex items-center gap-2">
-        <button
-          onClick={() => updateQuantity(item.productId, item.size, item.quantity - 1)}
-          className="p-1 bg-gray-200 rounded hover:bg-gray-300 transition"
-        >
-          <Minus size={16} />
-        </button>
-        <span className="w-8 text-center font-bold">{item.quantity}</span>
-        <button
-          onClick={() => updateQuantity(item.productId, item.size, item.quantity + 1)}
-          className="p-1 bg-gray-200 rounded hover:bg-gray-300 transition"
-        >
-          <Plus size={16} />
-        </button>
+          {/* Remove */}
+          <button
+            onClick={() => removeItem(item.productId, item.size)}
+            className="ml-2 text-red-600 hover:text-red-800 hover:bg-red-100 p-1 transition"
+          >
+            <Trash2 size={16} strokeWidth={2} />
+          </button>
+        </div>
       </div>
-
-      {/* Subtotal */}
-      <div className="w-24 text-right">
-        <p className="font-bold text-gray-800">
-          ${(item.price * item.quantity).toLocaleString('es-AR')}
-        </p>
-      </div>
-
-      {/* Remove */}
-      <button
-        onClick={() => removeItem(item.productId, item.size)}
-        className="text-red-500 hover:text-red-700 transition p-1"
-      >
-        <Trash2 size={18} />
-      </button>
     </div>
   );
 }

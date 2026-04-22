@@ -131,7 +131,7 @@ export default function CheckoutPage() {
                     placeholder="Nombre"
                     value={formData.customerName}
                     onChange={handleInputChange}
-                    className="col-span-2 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="col-span-2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
                   />
                   <input
                     type="email"
@@ -139,7 +139,7 @@ export default function CheckoutPage() {
                     placeholder="Email"
                     value={formData.customerEmail}
                     onChange={handleInputChange}
-                    className="col-span-2 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="col-span-2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
                   />
                   <input
                     type="tel"
@@ -147,7 +147,7 @@ export default function CheckoutPage() {
                     placeholder="Teléfono"
                     value={formData.customerPhone}
                     onChange={handleInputChange}
-                    className="col-span-2 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="col-span-2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
                   />
                   <input
                     type="text"
@@ -155,7 +155,7 @@ export default function CheckoutPage() {
                     placeholder="Dirección"
                     value={formData.customerAddress}
                     onChange={handleInputChange}
-                    className="col-span-2 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="col-span-2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
                   />
                   <input
                     type="text"
@@ -163,7 +163,7 @@ export default function CheckoutPage() {
                     placeholder="Ciudad"
                     value={formData.customerCity}
                     onChange={handleInputChange}
-                    className="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
                   />
                   <input
                     type="text"
@@ -171,7 +171,7 @@ export default function CheckoutPage() {
                     placeholder="Código Postal"
                     value={formData.customerPostalCode}
                     onChange={handleInputChange}
-                    className="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
                   />
                 </div>
               </div>
@@ -201,7 +201,7 @@ export default function CheckoutPage() {
               <div className="border-t pt-4 mb-6">
                 <div className="flex justify-between text-lg">
                   <span className="font-bold">Total</span>
-                  <span className="font-bold text-blue-600">
+                  <span className="font-bold text-red-600">
                     ${finalTotal.toLocaleString('es-AR')}
                   </span>
                 </div>
@@ -216,14 +216,14 @@ export default function CheckoutPage() {
               <button
                 onClick={handleCheckout}
                 disabled={loading}
-                className="w-full bg-blue-600 hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3 rounded-lg transition flex items-center justify-center gap-2"
+                className="w-full bg-red-600 hover:bg-red-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3 rounded-lg transition flex items-center justify-center gap-2"
               >
                 {loading && <Loader size={20} className="animate-spin" />}
                 {loading ? 'Procesando...' : 'Pagar con MercadoPago'}
               </button>
 
               <Link href="/carrito" className="block mt-3">
-                <button className="w-full px-4 py-2 text-blue-600 font-semibold hover:text-blue-700 transition border border-blue-600 rounded-lg">
+                <button className="w-full px-4 py-2 text-red-600 font-semibold hover:text-red-700 transition border border-red-600 rounded-lg">
                   Volver al carrito
                 </button>
               </Link>
